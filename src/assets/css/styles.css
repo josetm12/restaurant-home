@@ -1,0 +1,74 @@
+@import url(meyerreset.css);
+@import url(commonstyles.css);
+@import url(mediaqueries.css);
+
+:root[data-theme='light'] {
+  --text: #021d14;
+  --background: #eafbf5;
+  --primary: #9edeea;
+  --secondary: #d5e0f6;
+  --accent: #2d64d2;
+}
+:root[data-theme='dark'] {
+  --text: #e2fdf4;
+  --background: #04150f;
+  --primary: #155560;
+  --secondary: #09142a;
+  --accent: #2d64d2;
+}
+
+#theme-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#theme-toggle img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+[data-theme='light'] .d-block-light,
+[data-theme='dark'] .d-block-dark {
+  display: block !important;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 600;
+
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.logo > img {
+  height: 4rem;
+  width: 4rem;
+  background-color: var(--accent);
+  border-radius: 2rem;
+
+  padding: 0.5rem;
+}
+
+header > nav {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 3rem;
+  padding: 0 3rem;
+}
+
+nav a {
+  border-bottom: 5px solid transparent;
+}
+
+nav a.active {
+  border-bottom: 5px solid var(--accent);
+}

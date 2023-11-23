@@ -1,0 +1,93 @@
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+}
+
+/* box-sizing for all elements */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:not(button) {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.light {
+  /* forces light color-scheme */
+  color-scheme: light;
+}
+
+.dark {
+  /* forces dark color-scheme */
+  color-scheme: dark;
+}
+
+.d-none {
+  display: none;
+}
+
+button {
+  background-color: var(--accent);
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: ease-in 100ms;
+}
+
+button > * {
+  background-color: var(--accent);
+}
+
+[data-theme='light'] button {
+  box-shadow: 0 0 5px gray;
+}
+
+[data-theme='dark'] button {
+  box-shadow: 0 0 5px gray;
+}
+
+button:hover {
+  opacity: 1;
+  box-shadow: 0 0 10px gray;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* unvisited link */
+a:link {
+  color: rgba(72, 118, 35, 0.9);
+  opacity: 0.9;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+  opacity: 1;
+}
+
+/* mouse over link */
+a:hover {
+  color: rgba(72, 118, 35, 1);
+  opacity: 1;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+  opacity: 1;
+}
